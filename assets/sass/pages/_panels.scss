@@ -1,0 +1,59 @@
+body#panels {
+
+	.icons {
+		@include span(full);
+		margin-bottom: 40px;
+
+		.icon {
+			@include span(2.4);
+			text-align: center;
+			@include fontsize(24);
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.8;
+			}
+
+			img { display: block; margin: 0 auto 20px auto; }
+
+			&:nth-child(5n) {
+				@include last;
+			}
+		}
+	}
+	
+	section.panel {
+
+		padding: 140px 200px;
+		background: $primary center center no-repeat;
+		background-size: cover;
+		color: #ffffff;
+		@include clearfix;
+		margin-bottom: 10px;
+
+		h2 {
+			font-family: 'Proxima Nova Bold';
+			letter-spacing: 3px;
+			@include fontsize(45);
+		}
+
+		p {
+			@include fontsize(22, 1.6);
+		}
+
+		.panel-content {
+			@include span(5);
+		}
+
+		&.panel-right {
+			.panel-content {
+				@include last;
+			}
+		}
+	}
+
+	footer {
+		margin-top: 0 !important;
+	}
+
+}

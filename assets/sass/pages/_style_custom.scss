@@ -1,0 +1,56 @@
+/*=============================================
+=            Sass file changes by ab 
+		EACH PARTIALS IS DIVIDED INTO
+		SECTIONS					         =
+=============================================*/
+
+/*=============================================
+=           general css block            =
+=============================================*/
+@include paddingGenerate(60);
+@include paddingGenerate(80);
+.col-sm-4-custom{
+	width:33.33%;
+}
+/*=============================================
+=           footer scsss           		=
+=============================================*/
+footer{
+	.awards-custom{
+		.awards-img{
+			display:block;
+		}
+		div{
+			display:inline-block;
+			padding:0px 10px;
+			img.awards{
+				margin:0px;
+			}
+		}
+	}
+}
+
+/*=====  End of footer scss  ======*/
+/*=============================================
+=           Home page scsss           		=
+=============================================*/
+
+body#home {
+	.intro {
+		.intro-content-custom{
+			@include span(isolate 12 at 0);
+		}
+	}
+	.clients-custom{
+		img{
+			margin:20px;
+		}
+	}
+	
+}
+
+/*=====  End of home page scss  ======*/
+
+
+
+

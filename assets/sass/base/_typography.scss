@@ -1,0 +1,204 @@
+body {
+	font-family: 'Proxima Nova', arial;
+	color: $text;
+	@include fontsize(17, 1.6);
+}
+
+nav {
+	color: #ffffff;
+	text-transform: uppercase;
+
+	@include navlink();
+}
+
+h1 {
+	font-family: 'Proxima Nova Black';
+	@include fontsize(60);
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+h2 {
+	font-family: 'Proxima Nova Bold';
+	@include fontsize(45, 1);
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 0 0 40px 0;
+}
+
+h3 {
+	@include fontsize(30);
+	font-weight: normal; 
+	margin: 40px 0 20px 0;
+}
+
+b, strong {
+	font-family: 'Proxima Nova Bold';
+	font-weight: normal;
+}
+
+h1 a, h2 a, h3 a {
+	text-decoration: none;
+	 &:hover {
+	 	color: $secondary;
+	 }
+}
+
+p a {
+	color: $secondary;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.intro p {
+	@include fontsize(30);
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.button {
+	display: inline-block;
+	font-family: 'Proxima Nova Bold' !important;
+	@include fontsize(23);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: normal !important;
+	padding: 12px 50px;
+	background: $secondary !important;
+	text-decoration: none;
+	border-radius: 5px !important;
+	margin-top: 20px;
+	color: #ffffff;
+	cursor: pointer;
+
+	&:hover {
+		background: $primary !important;
+	}
+
+	&.button-center {
+		display: block;
+		width: 40%;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.button-label {
+	font-family: 'Proxima Nova Bold';
+	@include fontsize(23);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: $secondary;
+	text-decoration: none;
+	margin-top: 20px;
+	display: inline-block;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+.go {
+	font-family: 'icons';
+	width: 64px;
+	height: 64px;
+	border-radius: 32px;
+	border: 5px solid #ffffff;
+	padding: 10px;
+	@include fontsize(25);
+	line-height: 40px;
+	cursor: pointer;
+
+	&:hover {
+		color: $secondary;
+		border-color: $secondary;
+	}
+}
+
+ul.menu {
+	@include nolist();
+
+	li {
+		margin-bottom: 1px;
+		position: relative;
+
+		a {
+			font-family: 'Proxima Nova Bold';
+			@include fontsize(16);
+			display: block;
+			padding: 20px 30px;
+			color: $text;
+			background: $contrast;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&:hover {
+				background: $secondary;
+			}
+
+			&.active {
+				background: $text;
+				color: #ffffff;
+
+				&:after {
+					position: absolute;
+					right: 30px;
+					font-family: 'icons';
+					content: "c";
+					font-weight: bold;
+					text-transform: none;
+					@include fontsize(12);
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+}
+
+ul.similar {
+	color: $secondary;
+	font-family: 'Proxima Nova Bold';
+	@include navlink();
+}
+
+ul.tags {
+	@include nolist();
+	@include navlink();
+
+	li {
+		@include fontsize(16);
+		display: inline-block;
+		background: $contrast;
+		padding: 5px 10px;
+	}
+}
+
+div.tags {
+	@include nolist();
+	@include navlink();
+	margin-top: 10px;
+
+	a {
+		@include fontsize(16);
+		display: inline-block;
+		background: $contrast;
+		padding: 5px 10px;
+		margin: 0 2px 2px 0;
+
+		&.active {
+			color: #ffffff;
+			background: $text;
+		}
+	}
+}
+
+quote, blockquote {
+	font-family: 'Proxima Nova Light Italic';
+	@include fontsize(32);
+}

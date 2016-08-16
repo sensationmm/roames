@@ -1,0 +1,200 @@
+body#events, body#taxonomy-events-region, body#casestudies, body#taxonomy-casestudies-region, body#home, body#whitepapers, body#servicesheets {
+
+	.events-filter {
+		width: 80%;
+    	margin: 0px auto;
+	}
+
+	.filter {
+		background: $primary;
+		color: #ffffff;
+		font-family: 'Proxima Nova Bold';
+		@include fontsize(14);
+		top: -60px;
+		text-transform: uppercase;
+
+		ul {
+			@include nolist();
+			display: inline;
+
+			li {
+				float: left;
+				display: block;
+				position: relative;
+				padding: 20px 50px 20px 20px;
+				border-right: 1px solid #ffffff;
+
+				&.option {
+					padding: 0 !important;
+				}
+
+				a {
+					display: block;
+					position: relative;
+					text-decoration: none;
+					padding: 20px 70px;
+					font-family: 'Proxima Nova';
+					cursor: pointer;
+
+					&:hover {
+						background: #ffffff;
+						color: $primary;
+					}
+
+					&.active {
+						background: #ffffff;
+						color: $primary;
+						&:before {
+							position: absolute;
+							bottom: 0px;
+							left: 0px;
+							width: 100%;
+							text-align: center;
+							font-family: 'icons';
+							content: "f";
+							text-transform: none;
+						}
+					}
+				}
+
+				&.option-dropdown {
+					display: none;
+					padding: 17px 20px;
+
+					select {
+						margin-bottom: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	.events {
+		@include clearfix;
+		display: table;
+	}
+
+	.events-row-4 {
+		display: table-row;
+		height: 100%;
+	}
+
+	.event {
+		display: table-cell;
+		width: 25%;	
+		height: 100%;
+		float: none;
+		background: $contrast;
+		padding: 34px 30px 70px 30px;
+		border: 10px solid #ffffff;
+
+		.event-category {
+			@include fontsize(18);
+			text-transform: lowercase;
+		}
+
+		.event-date {
+			float: right;
+			@include fontsize(18);
+		}
+
+		h3 {
+			font-family: 'Proxima Nova Bold';
+			@include fontsize(21, 1.2);
+			text-transform: uppercase;
+			margin-top: 0px;
+		}
+
+		p {
+			@include fontsize(16);
+		}
+
+		&:nth-child(4n) {
+			margin-right: 0px;
+		}
+
+		&:nth-child(4n+1) {
+			clear: both;
+		}
+
+		a.button-label {
+			@include fontsize(19, 1);
+
+			&.event-register {
+				position: absolute;
+				bottom: 35px;
+			}
+		}
+
+		&.event-empty {
+			background: none !important;
+		}
+	}
+
+	.no-results {
+		display: table-cell;
+		width: 40%;
+		margin: 0% auto;
+		padding: 5%;
+		background: $contrast;
+		text-align: center;
+	}
+
+}
+
+body#single-event {
+
+	article.col-article {
+		@include span(8);
+
+		.event-category {
+			font-family: 'Proxima Nova Bold';
+			@include fontsize(20);
+			text-transform: uppercase;
+		}
+
+		.event-image {
+			margin-bottom: 40px;
+		}
+
+		.event-details {
+			border-top: 1px solid $border;
+			padding-top: 20px;
+			margin-top: 20px;
+
+			dl {
+				margin-bottom: 30px;
+				@include clearfix;
+
+				dt {
+					float: left;
+					font-family: 'Proxima Nova Bold';
+					text-transform: uppercase;
+					clear: both;
+				}
+
+				dd {
+					float: left;
+					padding: 0px;
+					margin: 0px 0px 0px 10px;
+				}
+			}
+		}
+	}
+
+	div.col-aside {
+		@include span(4 last);
+
+		.form-box {
+			margin-top: 26px;
+
+			form {
+				.hs-form-field {
+					width: 100% !important;
+					margin-right: 0px !important;
+				}
+			}
+		}
+	}
+
+}

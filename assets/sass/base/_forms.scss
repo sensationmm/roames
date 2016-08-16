@@ -1,0 +1,118 @@
+form, form.hs-form  {
+	@include span(full);
+
+
+	label {
+		display: block;
+		text-align: left;
+		@include fontsize(18);
+		margin-bottom: 7px;
+	}
+
+	input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+		width: 100%;
+		border: 1px solid $border;
+		margin-bottom: 20px;
+		padding: 1.5% 2.5%;
+		@include fontsize(17);
+		background: #ffffff;
+	}
+
+	fieldset {
+		@include span(full); 
+		max-width: none !important;
+	}
+
+
+
+	.form-half, .hs-form-field {
+		width: 48% !important;
+		margin-right: 2%;
+
+		&:nth-of-type(2n) {
+			margin-right: 0px;
+		}
+
+		input[type="text"], input[type="tel"], input[type="email"], textarea {
+			padding: 3% 5%;
+		}
+	}
+
+	.hs_message, .hs_region, .hs_what_is_this_regarding, .hs_submit {
+		width: 100% !important;
+		clear: both;
+	}
+
+	fieldset.form-columns-1 .hs-input {
+		width: 98% !important;
+	}
+
+	input[type="submit"] {
+		min-width: 180px;
+		display: inline-block;
+		font-family: 'Proxima Nova Bold';
+		@include fontsize(17);
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-weight: normal;
+		padding: 12px 30px;
+		background: $secondary;
+		text-decoration: none;
+		border-radius: 5px;
+		margin-top: 20px;
+		-webkit-appearance: none;
+		border: none;
+		border-type: solid;
+		color: #ffffff;
+		cursor: pointer;
+
+		&:hover {
+			background: $primary;
+		}
+	}
+}
+
+.form-box {
+	background: $contrast;
+	padding: 5%;
+	@include clearfix;
+	margin-top: 40px;
+
+	.form-box-header {
+		font-family: 'Proxima Nova Bold';
+		@include fontsize(26, 1);
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+
+	&.full-width {
+		.form-box-header {
+			@include fontsize(20, 1);
+		}
+
+		form {
+			.form-half {
+				@include span(full);
+			}
+
+			textarea {
+				padding: 3% 5%;
+			}
+		}
+	}
+}
+
+
+
+#popup-newsletter {
+	form, form.hs-form {
+		.form-half, .hs-form-field {
+			width: 100% !important;
+
+			input[type="text"], input[type="tel"], input[type="email"], textarea {
+				padding: 1.5% 2.5%;
+			}
+		}
+	}
+}

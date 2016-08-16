@@ -1,0 +1,63 @@
+/*=============================================
+=           Home page scsss           		=
+=============================================*/
+
+@media (max-width: 1024px) and (min-width: 671px){
+	body#home {
+		.intro {
+			.intro-content-custom {
+				h1 {
+	    			font-size: 8vw;
+	    		}
+	    	}
+	    }
+	}
+}
+@media (min-width: 1024px) and (max-width: 1090px){
+	body#home {
+		.intro {
+			.intro-content-custom{
+				@include span(isolate 12 at 0);
+				h1{
+					font-size: 80px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px){
+	div.padding-side-mob-40{
+		padding-left:40px;
+		padding-right:40px;
+	}
+	body#home .case-study-custom {
+		width: 100%;
+		/*
+		margin-right:1%;
+		padding: 62px 30px 30px 30px;
+		h3{
+			word-wrap: break-word;
+		}
+		*/
+	}
+}
+
+/*=====  End of home page scss  ======*/
+
+/*==================================
+=            footer css            =
+==================================*/
+@media screen and (min-width: 768px) and (max-width: 1220px){
+	footer{
+		.footer-content-custom{
+			width:85%;
+			margin: 0 auto;
+			float:none;
+			
+			.footer-section-custom{
+				padding: 0 12.66666667% 32px 9.666667%;
+			}
+		}
+	}	
+}
+/*=====  End of footer css  ======*/

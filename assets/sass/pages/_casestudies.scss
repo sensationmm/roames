@@ -1,0 +1,69 @@
+body#casestudies, body#taxonomy-casestudies-region, body#home {
+	
+	.case-study {
+		@include span(3);
+		height: 0;
+		background: $primary center center no-repeat;
+		background-size: cover;
+		color: #ffffff;
+		margin-bottom: 30px;
+		padding: 65px 0px 15% 0px; 
+
+		&:nth-child(4n), &.casestudy4 {
+			@include last;
+		}
+
+		.case-study-label {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+			padding: 65px 30px 15px 30px; 
+			background: url(../images/casestudy-mask.png) bottom left repeat-x;
+
+			h3 {
+				font-family: 'Proxima Nova Bold';
+				text-transform: uppercase;
+				@include fontsize(18, 1.3);
+				margin-top: 0;
+			}
+
+			.case-study-category {
+				@include fontsize(18);
+				text-transform: lowercase;
+			}
+		}
+	}
+
+	.events {
+		display: block;
+	}
+
+}
+
+body#single-casestudy {
+	.form-box {
+		margin-bottom: 40px;
+		
+		.form-box-header {
+			color: $secondary;
+		}
+	}
+
+
+
+	form.hs-form  {
+		.hs-form-field {
+			width: 32.5% !important;
+			margin-right: 1%;
+
+			&:nth-of-type(2n) {
+				margin-right: 1% !important;
+			}
+
+			&:nth-of-type(3n) {
+				margin-right: 0px;
+			}
+		}
+	}
+}

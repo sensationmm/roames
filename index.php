@@ -1,0 +1,1 @@
+<?php echo 'index';//header('Location: /not-found/'); ?>
